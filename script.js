@@ -25,6 +25,19 @@ function increaseCount(type) {
   updateWaitTime();
 }
 
+function decreaseCount(type) {
+  if (type === "large") {
+    largeCount--;
+  } else if (type === "medium") {
+    mediumCount--;
+  } else if (type === "small") {
+    smallCount--;
+  }
+
+  updateWaitCount();
+  updateWaitTime();
+}
+
 // 初始化等待车数和等待时间
 updateWaitCount();
 updateWaitTime();
