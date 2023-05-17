@@ -8,6 +8,7 @@ function updateWaitCount() {
 }
 
 function updateWaitTime() {
+  totalWaitTime = 0
   largeWaitTime = largeCount * 30
   mediumWaitTime = mediumCount * 20
   smallWaitTime = smallCount * 10
