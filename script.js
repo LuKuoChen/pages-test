@@ -8,10 +8,10 @@ function updateWaitCount() {
 }
 
 function updateWaitTime() {
-  totalWaitTime = 0
-  largeWaitTime = largeCount * 30
-  mediumWaitTime = mediumCount * 20
-  smallWaitTime = smallCount * 10
+  let totalWaitTime = 0
+  let largeWaitTime = largeCount * 30
+  let mediumWaitTime = mediumCount * 20
+  let smallWaitTime = smallCount * 10
   const totalWaitTime = largeWaitTime + mediumWaitTime  + smallWaitTime;
   document.getElementById("wait-time").textContent = "預估等待時間：" + totalWaitTime + " 分鐘";
 }
