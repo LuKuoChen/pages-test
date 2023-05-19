@@ -4,9 +4,6 @@ let smallCount = 0;
 
 function updateWaitCount() {
   const totalCount = largeCount + mediumCount + smallCount;
-  if (totalCoun < 0) {
-    totalCoun = 0;
-  } 
   document.getElementById("wait-count").textContent = "目前等待車數：" + totalCount;
 }
 
@@ -15,9 +12,6 @@ function updateWaitTime() {
   const mediumWaitTime = mediumCount * 20
   const smallWaitTime = smallCount * 10
   const totalWaitTime = largeWaitTime + mediumWaitTime  + smallWaitTime;
-  if (totalWaitTime < 0) {
-    totalWaitTime = 0;
-  }
   document.getElementById("wait-time").textContent = "預估等待時間：" + totalWaitTime + " 分鐘";
 }
 
