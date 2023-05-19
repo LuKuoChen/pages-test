@@ -4,7 +4,14 @@ let smallCount = 0;
 
 function updateWaitCount() {
   const totalCount = largeCount + mediumCount + smallCount;
-  document.getElementById("wait-count").textContent = "目前等待車數：" + totalCount;
+  let result;
+  if (totalCoun < 0) {
+    result = 0;
+  } else {
+    result = totalCount;
+  }
+  return result;
+  document.getElementById("wait-count").textContent = "目前等待車數：" + result;
 }
 
 function updateWaitTime() {
@@ -12,7 +19,14 @@ function updateWaitTime() {
   const mediumWaitTime = mediumCount * 20
   const smallWaitTime = smallCount * 10
   const totalWaitTime = largeWaitTime + mediumWaitTime  + smallWaitTime;
-  document.getElementById("wait-time").textContent = "預估等待時間：" + totalWaitTime + " 分鐘";
+  let result;
+  if (totalWaitTime < 0) {
+    result = 0;
+  } else {
+    result = totalWaitTime;
+  }
+  return result;
+  document.getElementById("wait-time").textContent = "預估等待時間：" + result + " 分鐘";
 }
 
 function increaseCount(type) {
